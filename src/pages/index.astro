@@ -1,0 +1,29 @@
+---
+import '../../style.css';
+import Card from '../components/Card.jsx';
+import Pdf from '../components/Pdf.jsx';
+import Typewriter from '../components/Typewriter.jsx';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro con Tailwind</title>
+    <link rel="stylesheet" href="/src/styles/style.css">
+</head>
+<body>
+    <div class="w-screen h-auto text-center">
+        
+        <!-- client:load permite cargar la api en react desde astro es una cosa peculiar que tiene astro
+             para de este modo decir que componentes quieres renderizar. En el caso de no ponerlo no puede
+             realizar la consulta a la api
+        -->
+        <Typewriter client:load/>
+
+        <Card client:load/>
+        <Pdf client:load/>
+    </div>
+</body>
+</html>
